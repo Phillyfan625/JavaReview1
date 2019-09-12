@@ -1,11 +1,16 @@
 import java.util.Scanner;
 public class fan{
     // define your data
-
+    
     private int speed;
     private boolean on;
     private double radius;
     String color;
+
+    //three constants 
+    // final int SLOW;
+    // final int MEDIUM;
+    // final int FAST;
    
 
     public fan(){
@@ -14,6 +19,10 @@ public class fan{
         on = false;
         radius = 5;
         color = "blue";
+        //constants
+        // SLOW = 1;
+        // MEDIUM = 2;
+        // FAST = 3;
 
     }
     public fan(int inf_Speed, boolean inf_On, double inf_Radius, String inf_Color){
@@ -24,6 +33,10 @@ public class fan{
         inf_On = on;
         inf_Radius = radius;
         inf_Color = color;
+        //constants
+        // inf_Slow = SLOW;
+        // inf_Medium = MEDIUM;
+        // inf_Fast = FAST;
     }
     
     
@@ -69,6 +82,20 @@ public class fan{
      */
     public void setRadius(double radius) {
         this.radius = radius;
+    }
+    // Additional methods -- such as for calculation, display
+
+    public String toString(){
+        // return data as a String
+        // if the fan is on
+        if (on = true){
+            return "Fan Speed : " + speed + "Fan Color: " + color + "Fan Radius: " + radius;
+        }
+        // if the fan isn't on
+        else {
+            return color + " " + radius + " " + " The fan is off";
+        }
+        
     }
 
 }
