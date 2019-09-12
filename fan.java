@@ -5,24 +5,19 @@ public class fan{
     private int speed;
     private boolean on;
     private double radius;
-    String color;
+    private String color;
 
     //three constants 
-    // final int SLOW;
-    // final int MEDIUM;
-    // final int FAST;
+    public static final int SLOW = 1, MEDIUM = 2, FAST = 3;
    
 
     public fan(){
         //initialize your data
-        speed = 0;
+        speed = SLOW;
         on = false;
         radius = 5;
         color = "blue";
-        //constants
-        // SLOW = 1;
-        // MEDIUM = 2;
-        // FAST = 3;
+        
 
     }
     public fan(int inf_Speed, boolean inf_On, double inf_Radius, String inf_Color){
@@ -33,10 +28,7 @@ public class fan{
         inf_On = on;
         inf_Radius = radius;
         inf_Color = color;
-        //constants
-        // inf_Slow = SLOW;
-        // inf_Medium = MEDIUM;
-        // inf_Fast = FAST;
+       
     }
     
     
@@ -83,20 +75,38 @@ public class fan{
     public void setRadius(double radius) {
         this.radius = radius;
     }
+    
+    /**
+     * @return String return the color
+     */
+    public String getColor() {
+        return color;
+    }
+
+    /**
+     * @param color the color to set
+     */
+    public void setColor(String color) {
+        this.color = color;
+    }
+
     // Additional methods -- such as for calculation, display
 
     public String toString(){
         // return data as a String
         // if the fan is on
-        if (on = true){
-            return "Fan Speed : " + speed + "Fan Color: " + color + "Fan Radius: " + radius;
+        if (on == true){
+            return "Fan Speed : " + speed + "\nFan Color: " + color + "\nFan Radius: " + radius;
         }
         // if the fan isn't on
         else {
-            return color + " " + radius + " " + " The fan is off";
+            return "\nFan Color: " + color + " " + "\nFan Radius: " + radius + " " + " \nThe fan is off";
         }
         
     }
+
+
+    
 
 }
 
